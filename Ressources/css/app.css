@@ -1,8 +1,28 @@
-﻿
+
 /**/
 body {
     overflow-y:hidden;
-     overflow-x:hidden;
+    overflow-x:hidden;
+}
+
+/* Remove black background from draggable element */
+.ui-draggable-handle {
+    background: transparent !important;
+    border: none !important;
+}
+
+/* Ensure the toolbar is visible */
+#toolbar {
+    background: transparent !important;
+}
+
+/* Style for draggable items */
+.draggable-item {
+    background: transparent !important;
+    border: 1px dashed #ccc !important;
+    padding: 5px !important;
+    margin: 5px !important;
+    cursor: move !important;
 }
 .box-header>.fa, .box-header>.glyphicon, .box-header>.ion, .box-header .box-title {
     display: inline-block;
