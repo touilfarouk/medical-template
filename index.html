@@ -120,7 +120,7 @@
       <div id="wrapper">
         <!--     <div id="cont3" class="container" style="position: absolute; top:130px; left: 300px; height: auto; opacity:1" data-icon="css/icons/browser.png" data-drag=true data-resize=false data-collapsable=true data-close=true data-containment="document" data-modal=true data-buttons="fullscreen,close" data-autoresize="true">
         <h2>Container 1</h2>
-        <div id="cont1Content">
+        <div id="window1Content">
             <p>This is a modal window and it is created adding data-modal=true to the element constructor. It can't be resized, it's centered on window, it's white skinned.</p>
             <br>
             <button onclick="$('#cont1').containerize('showdata');$(this).hide();">show properties</button>
@@ -158,7 +158,7 @@
             />
             Demandes Biologiques
           </h2>
-          <div id="UcDemandesBiologique1"></div>
+          <div id="biologyPanel"></div>
         </div>
 
         <div
@@ -180,7 +180,7 @@
             Demandes Radiologique
           </h2>
 
-          <div id="DemandesRadiologique1"></div>
+          <div id="radiologyPanel"></div>
         </div>
 
         <div
@@ -201,7 +201,7 @@
             />Ordonnance
           </h2>
 
-          <div id="DemandesRadiologique2"></div>
+          <div id="prescriptionPanel"></div>
         </div>
 
         <div id="dock"></div>
@@ -549,7 +549,7 @@
             <div class="box-body">
               <!--ACCUEIL_CLINIQUE-->
               <div class="row">
-                <uc2:Uc_User ID="Uc_User1" />
+                <div id="userPanel"></div>
                 <div class="col-md-12">
                   <div class="row">
                     <div class="col-xs-1">
@@ -5657,6 +5657,9 @@
 
                         <!--/////////////////////////DEBUT CONTENAIRE PELVIEN////////////////////////////////-->
                         <div class="tab-pane" id="Pelvien">
+                          <center>
+                            <label id="LabelPelvien">PELVIEN</label>
+                          </center>
                           <div
                             class="box box-solid collapsed-box"
                             style="
@@ -5681,10 +5684,9 @@
                                   <strong>
                                     <label
                                       id="LB_FEMME"
-                                      Text="Si Femme"
                                       style="color: orange"
-                                    ></label
-                                  ></strong>
+                                    >Si Femme</label>
+                                  </strong>
                                 </h3>
                               </div>
 
@@ -5726,9 +5728,8 @@
                               </label>
                               <label
                                 id="LB_BRULURES_MICTIONNELLE"
-                                Text="Brulures mictionnelles"
                                 class="col-xs-3 control-label"
-                              ></label>
+                              >Brûlures mictionnelles</label>
 
                               <label class="col-xs-1">
                                 <div
@@ -5768,9 +5769,8 @@
                               </label>
                               <label
                                 id="LB_BRULURES_MICTIONNELLE_ABSENT"
-                                Text="Absente"
                                 class="col-xs-1 control-label"
-                              ></label>
+                              >Absente</label>
 
                               <label class="col-xs-1">
                                 <div
@@ -5810,14 +5810,14 @@
                               </label>
                               <label
                                 id="LB_BRULURES_MICTIONNELLE_PRESENTE"
-                                Text="Présentes"
                                 class="col-xs-1 control-label"
-                              ></label>
+                              >Présentes</label>
 
                               <div class="col-xs-4">
                                 <textarea
                                   id="LB_BRULURES_MICTIONNELLE_PRESENTE_ABSENTE"
                                   class="adresse form-control input-sm"
+                                  placeholder="Observations"
                                 ></textarea>
                               </div>
 
@@ -5861,9 +5861,8 @@
                               </label>
                               <label
                                 id="LB_DYSURIE"
-                                Text="Dysurie"
                                 class="col-xs-3 control-label"
-                              ></label>
+                              >Dysurie</label>
 
                               <label class="col-xs-1">
                                 <div
@@ -5903,9 +5902,8 @@
                               </label>
                               <label
                                 id="LB_DYSURIE_ABSENT"
-                                Text="Absente"
                                 class="col-xs-1 control-label"
-                              ></label>
+                              >Absente</label>
 
                               <label class="col-xs-1">
                                 <div
@@ -5945,14 +5943,14 @@
                               </label>
                               <label
                                 id="LB_DYSURIE_PRESENTE"
-                                Text="Présentes"
                                 class="col-xs-1 control-label"
-                              ></label>
+                              >Présentes</label>
 
                               <div class="col-xs-4">
                                 <textarea
                                   id="LB_DYSURIE_PRESENTE_ABSENTE"
                                   class="adresse form-control input-sm"
+                                  placeholder="Observations"
                                 ></textarea>
                               </div>
 
@@ -5996,9 +5994,8 @@
                               </label>
                               <label
                                 id="LB_POLLAKIURIE"
-                                Text="Pollakiurie"
                                 class="col-xs-3 control-label"
-                              ></label>
+                              >Pollakiurie</label>
 
                               <label class="col-xs-1">
                                 <div
@@ -6038,9 +6035,8 @@
                               </label>
                               <label
                                 id="LB_POLLAKIURIE_ABSNETE"
-                                Text="Absente"
                                 class="col-xs-1 control-label"
-                              ></label>
+                              >Absente</label>
 
                               <label class="col-xs-1">
                                 <div
@@ -6080,9 +6076,8 @@
                               </label>
                               <label
                                 id="Label58"
-                                Text="Présentes"
                                 class="col-xs-1 control-label"
-                              ></label>
+                              >Présentes</label>
 
                               <div class="col-xs-4">
                                 <textarea
@@ -6829,7 +6824,7 @@
                           >
                             <div class="col-xs-12">
                               <textarea
-                                id="TextBox25"
+                                id="can you add label to Palvien section25"
                                 class="adresse form-control input-sm"
                                 rows="20"
                               ></textarea>
@@ -6932,11 +6927,12 @@
                         <center>
                           <div>
                             <!-- VALIDATION_RESULTATS -->
-                            <asp:Button
-                              id="LB_BTN_CONCULTATION"
-                              Text="Valider"
+                            <button
+                              id="btn-consultation"
                               class="btn btn-primary"
-                            />
+                            >
+                              Valider
+                            </button>
                           </div>
                         </center>
                       </div>
@@ -7143,7 +7139,7 @@
             label: "Épingler à la barre des tâches",
             className: "",
             action: function (container2, btn) {
-              $(container2).containerize("iconize", "dock");
+              $(container2).containerize("iconize", "dockBar");
             },
           };
 
