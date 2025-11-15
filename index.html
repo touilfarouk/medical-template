@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 
-<head id="Head1" runat="server">
+<head>
     <title></title>
     
     <link href="Ressources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -52,9 +52,6 @@
 
 
 
-<asp:ContentPlaceHolder ID="head" runat="server">
-          
-    </asp:ContentPlaceHolder>
     </head>
 
  <body>
@@ -73,58 +70,7 @@
 
  
     
-    <style>
-
-     
-        #wrapper{
-            position: absolute;
-       
-
-   
-
-        }
-
-        .container2
-        {
-              z-index:99;
-            width: 500px;
-            height: auto;
-        }
-
-        #dock{
-            position: fixed;
-            top: 0;
-            left:0;
-            width: 100%;
-            background: rgba(0,0,0,0.5);
-        }
-
-        #actions
-        {
-            
-            position: relative;
-            top:70px;
-            padding: 50px;
-        }
-
-        #actions button{
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            border: 1px solid white;
-            padding: 7px;
-            display: inline-block;
-            margin: 3px;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            background: #d4d4d4;
-        }
-
-        #actions button:hover{
-            background: #ffc000;
-        }
-
-    </style>
+    
 
 
 <div id="wrapper">
@@ -164,7 +110,7 @@
 <div id="cont3" class="container2" style=" top:130px; left: 100px;   width: 940px;" data-drag="true" data-skin="black" data-buttons="fullscreen,close" data-dock="dock"  data-icon="">
 <h2>
 <img src="Ressources/toolbar/css/icons/biologie.png" alt="Alternate Text" style="width:40px;" /> Demandes Biologiques</h2>
-<uc3:UcDemandesBiologique ID="UcDemandesBiologique1" runat="server" />
+<div id="UcDemandesBiologique1"></div>
 </div>
 
 
@@ -173,7 +119,7 @@
 <h2>
 <img src="Ressources/toolbar/css/icons/radiologie.png" alt="Alternate Text" style="width:40px;" /> Demandes Radiologique</h2>
 
-    <uc4:DemandesRadiologique ID="DemandesRadiologique1" runat="server" />
+    <div id="DemandesRadiologique1"></div>
 
 </div>
 
@@ -182,7 +128,7 @@
 <h2>
 <img src="Ressources/toolbar/css/icons/medicaments.png" alt="Alternate Text" style="width:40px;" />Ordonnance</h2>
 
-    <uc4:DemandesRadiologique ID="DemandesRadiologique2" runat="server" />
+    <div id="DemandesRadiologique2"></div>
 
 </div>
 
@@ -214,9 +160,7 @@
 
     
 <div id="extruderRight" class="{title:'Les explorations', url:''}">
-<style>td{  padding:10px;}.imghover { opacity: 1.0;filter: alpha(opacity=100);
-/* For IE8 and earlier */}.imghover:hover{opacity: 0.4;filter: alpha(opacity=40); /* For IE8 and earlier */}
-</style>
+ 
 
    
 
@@ -411,9 +355,7 @@
 
 
 
-    <style type="text/css">
-    .title{color:red;}
-    </style>
+    
 
 
 
